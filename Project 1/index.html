@@ -1,0 +1,177 @@
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <title>Project 1 - Booking Form using Bootstrap</title>
+
+    <!--Import Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!--Import Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    
+    <!--Import Toastr-->
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" /> 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  
+    <!--Import JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+
+    <!--Import MomentJS-->
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js'></script>
+
+    <!--CSS and JavaScript Files-->
+    <link href="style.css" rel="stylesheet" >
+    <script src="index.js"></script>
+</head>
+  
+  
+<body>
+  
+  <!--Header-->
+  <div class="container">
+    <div class="row">
+      <h1 class="red col-md-12"><b>Bootstrap Booking Form</b></h1>
+      <p class="well well-sm col-md-12">Fill out the form and click the submit button when complete...</p>
+    </div>
+    
+   <!--Form-->
+    <form id="form">
+    <div class="row">
+      
+      <!--User Panel-->
+      <!--Heading-->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="panel panel-primary">
+            <div class="panel-heading">User</div>
+            <div class="panel-body">
+              
+              <!--Username-->
+              <div class="form-group">
+                <label for="username" class="col-md-4 col-form-label">Username:</label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control" name="username" placeholder="Type username..." required></div></div>
+              
+              <!--First Name-->
+              <div class="form-group">
+                <label for="firstname" class="col-md-4 col-form-label">First Name:</label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control" name="firstname" placeholder="Type first name..." required></div></div>
+              
+              <!--Last Name-->
+              <div class="form-group">
+                <label for="lastname" class="col-md-4 col-form-label">Last Name:</label>
+                <div class="col-md-8">
+                  <input type="text" class="form-control" name="lastname" placeholder="Type last name..." required></div></div></div></div></div>
+        
+        <!--Contact Panel-->
+        <!--Heading-->
+        <div class="row">
+          <div class="panel panel-primary">
+            <div class="panel-heading">Contact</div>
+            <div class="panel-body">
+              
+              <!--Phone Number-->
+              <div class="form-group input-group .m-0">
+                <label class="input-group-addon"><i class="bi bi-telephone-fill"></i></label>
+                <input type="text" class="form-control" name="phoneinput" placeholder="Type phone#..." required></div>
+              
+              <!--Fax-->
+              <div class="form-group input-group .m-0">
+                <label class="input-group-addon"><i class="bi bi-printer-fill"></i></label>
+                <input type="text" class="form-control" name="faxinput" placeholder="Type fax#..." required></div>
+              
+              <!--Email-->
+              <div class="form-group input-group .m-0">
+                <label class="input-group-addon"><i class="bi bi-envelope-fill"></i></label>
+                <input type="text" class="form-control" name="emailinput" placeholder="Type e-mail..." required></div></div></div></div>
+        
+        <!--Schedule Panel-->
+        <!--Heading-->
+        <div class="row">
+          <div class="panel panel-primary">
+            <div class="panel-heading">Schedule</div>
+            <div class="panel-body form">
+              
+              <!--Adults-->
+              <div class="form-group form-row">
+                <label for="adults">Adults:</label>
+                <select type="button" class="form-control" id="adults" required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select></div>
+              
+              <!--Check-in-->
+              <div class="row form-row">
+                <div class="form-group col-md-6">
+                  <label for="checkin">Check-In:</label>
+                  <input type="date" class="form-control" id="checkin" required></div>
+                
+                <!--Check out-->
+                <div class="form-group col-md-6">
+                  <label for="checkout">Check-Out:</label>
+                  <input type="date" class="form-control" id="checkout" required></div></div>
+              
+              <!--Days-->
+              <div class="row form-row">
+                <div class="col-md-6">
+                  <label for="days">Days:</label>
+                  <input type="text" class="form-control" id="daydisplay" name="daydisplay" placeholder="Displays days..." readonly></div>
+                
+                <!--Cost-->
+                <div class="col-md-6">
+                  <label for="cost">Cost($):</label>
+                  <input type="text" class="form-control" id="costdisplay" name="costdisplay" placeholder="Displays cost..." readonly required></div></div></div></div></div></div>
+      
+      <!--Other Panel-->
+      <!--Heading-->
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Other</div>
+          <div class="panel-body" style="height:680px">
+            
+            <!--Message-->
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea class="form-control" name="message" rows="25" placeholder="Type message here..."></textarea></div>
+            
+            <!--Range-->
+            <div class="form-group">
+              <label for="range">Range:</label>
+              <input type="range" min="1" max="10" value="5" class="slider" name="range"></div>
+            
+            <!--Priority-->
+            <div class="form-group">
+              <label for="radio">Priority:</label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio" checked>Low</label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio">Med</label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio">High</label></div></div></div></div></div>
+      
+      <!--Buttons-->
+      <div class="row">
+        <div class="col-md-6"></div>
+        
+        <!--Reset-->
+        <div class="col-md-3">
+          <button type="reset" id="reset" class="btn btn-primary btn-block"><i class ="bi bi-eraser-fill"></i> Reset</button></div>
+        
+        <!--Submit-->
+        <div class="col-md-3">
+          <button type="submit" id="submit" class="btn btn-success btn-block"><i class="bi bi-send-fill"></i> Submit</button></div></div></form></div>
+  
+  <button onclick="displaytoast">Press</button>
+  
+  </body>
+</html>
