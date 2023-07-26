@@ -1,6 +1,6 @@
 # CSDS221
 
-This folder contains all the projects done for CSDS221 - Full Stack Web Design.
+This folder contains all the projects done for CSDS221 - Full Stack Web Development.
 
 Project1 is a booking form using Bootstrap 3.0.
 Project2 is a to-do list with Vue implementation.
