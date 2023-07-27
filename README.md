@@ -1,4 +1,4 @@
-# CSDS221
+# CSDS221 - Full Stack Web Development
 
 This folder contains all the projects done for CSDS221 - Full Stack Web Development.
 
